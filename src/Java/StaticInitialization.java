@@ -20,10 +20,6 @@ public class StaticInitialization {
 
         //calculate area of parallelogram  b*h
         //if number is less than 0 , throw exception    java.lang.Exception: Breadth and height must be positive
-
-
-
-
     }
 
     protected static void initializeVariables() throws Exception {
@@ -31,10 +27,10 @@ public class StaticInitialization {
         b = Integer.parseInt(in.nextLine());
         h = Integer.parseInt(in.nextLine());
         in.close();
-        if( b< 0 || h <0) {
-            throw new Exception("Breadth and height must be positive");
-        }else
+        if( b> 0 && h >0) {
             System.out.println(b*h);
+        }else
+            System.out.println("java.lang.Exception: Breadth and height must be positive");
     }
 
 
