@@ -2,6 +2,7 @@ package Java;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class DataArraylistMethods {
     public static void main(String[] args) {
@@ -14,8 +15,16 @@ public class DataArraylistMethods {
 //    changeIndexOfArrayList(ints, 3, 100);
 //    printElementsofArrayList(ints);
     int[] inArr = {12,123,1,4};
-    printElementsofArrayList(inArr);
-    printElementsofArrayList(removeAnIndexInArray(inArr, 1));
+    String[] strs = {"Pedro", "Abe", "Mike", "Brisque"};
+    printElementsofArrayList(strs);
+    Arrays.sort(strs);
+    printElementsofArrayList(strs);
+
+//    printElementsofArrayList(inArr);
+    //sort array with class method
+//        Arrays.sort(inArr);
+//        printElementsofArrayList(inArr);
+//    printElementsofArrayList(removeAnIndexInArray(inArr, 1));
 
 
 //        System.out.println(sumOfIntArrayList(ints));
@@ -45,6 +54,13 @@ public class DataArraylistMethods {
     public static void printElementsofArrayList(int[] ints){
         for(int i: ints){
             System.out.printf("%d ", i);
+        }
+        System.out.print("\n");
+    }
+
+    public static void printElementsofArrayList(String[] strs){
+        for(String s: strs){
+            System.out.printf("%s ", s);
         }
         System.out.print("\n");
     }

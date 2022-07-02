@@ -2,10 +2,10 @@ package Java;
 
 public class DataStringMethods {
     public static void main(String[] args) {
-        String[] names = {"Peter", "Pedro", "Pierre", "Leslie"};
-        for(String n: names){
-            System.out.println(leetCode(n));
-        }
+//        String[] names = {"Peter", "Pedro", "Pierre", "Leslie"};
+//        for(String n: names){
+//            System.out.println(leetCode(n));
+//        }
 //        String a = "hello";
 //        String b = "earth";
 //        String c = combineTwoStrings(a,b);
@@ -16,7 +16,23 @@ public class DataStringMethods {
 //        for(char c: chars){
 //            System.out.println(c);
 //        }
+        String a = "hello world";
+//        System.out.println(a);
+//        System.out.println(reverseString(a));
+        System.out.println(a.substring(1, 3));
+        System.out.println(a.substring(3));
+    }
 
+
+
+    //reverse the string
+    public static String reverseString(String s){
+        String bucket = "";
+        char[] chars = s.toCharArray();
+        for(int i = chars.length-1; i>= 0; i--){
+            bucket += chars[i];
+        }
+        return bucket;
     }
 
     //turn a string into leet code
